@@ -5,6 +5,7 @@ const button = document.querySelector('.btn');
 
 
 
+//Fetching quotes from the api.
 
 const getRandomQuote = async () => {
     try {

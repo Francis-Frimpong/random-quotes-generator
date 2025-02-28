@@ -1,5 +1,5 @@
-const displayQuotes = document.querySelector('.display-quotes');
-const button = document.querySelector('.btn');
+// const displayQuotes = document.querySelector('.display-quotes');
+// const button = document.querySelector('.btn');
 
 
 
@@ -24,4 +24,4 @@ const getRandomQuote = async () => {
 }
 
  
-button.addEventListener('click', getRandomQuote);
+// button.addEventListener('click', getRandomQuote);

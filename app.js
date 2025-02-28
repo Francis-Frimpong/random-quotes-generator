@@ -3,29 +3,24 @@ const button = document.querySelector('.btn');
 
 
 
-const quotesArr = [
-    "Dream big, start small, but never stop moving.",
-    "The best way to predict the future is to build it.",
-    "Growth begins at the edge of your comfort zone.",
-    "Success is built one small step at a time.",
-    "Fear fades when action takes the lead.",
-    "Every expert was once a beginner.",
-    "Consistency beats talent when talent isn’t consistent.",
-    "You don’t have to be great to start, but you have to start to be great."
-]
-displayQuotes.innerText = quotesArr[0];
 
-const generateQuoteRandomly = () => {
-    for(let quote of quotesArr){
-        const random = Math.floor(Math.random() * quotesArr.length);
-        displayQuotes.innerText = quotesArr[random];
-        
+
+
+const getRandomQuote = async () => {
+    try {
+        const response = await fetch("quotes.json");// this fetch the data
+        const data = await response.json(); // wait for the data to respond and convert it to json
+
+        data.quotes.forEach(quote => {
+            const random = Math.floor(Math.random() * data.quotes.length);
+            displayQuotes.innerText = data.quotes[random].text;
+            
+        });
+
+    } catch (error) {
+        console.error("Error loading JSON file:", error); // Check for error incase the data does'nt respond
     }
 }
 
-let setTimer = setInterval(() => {
-    generateQuoteRandomly();
-},5000);
-
-  
-button.addEventListener('click', generateQuoteRandomly);
+ 
+button.addEventListener('click', getRandomQuote);

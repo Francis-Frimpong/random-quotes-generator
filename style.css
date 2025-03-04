@@ -1,0 +1,59 @@
+body{
+    background-color:  hsl(218, 23%, 16%);
+    display: grid;
+    place-items: center;
+    font-family: "Manrope", serif;
+    margin: 0;
+    padding: 2em;
+    position: relative;
+}
+
+#card {
+    background-color: hsl(217, 19%, 24%);
+    display: grid;
+    place-items: center;
+    max-width: 576px;
+    border-radius: 10px;
+    margin-top: 5em;
+    
+}
+
+
+#card h4 {
+    color: hsl(150, 100%, 66%);
+    letter-spacing:5px;
+
+}
+
+
+#card .adviceId{
+    color: hsl(150, 100%, 66%);
+}
+
+
+.advice{
+    font-size: 28px;
+    text-align: center;
+    color: hsl(193, 38%, 86%);
+    width: 76%;
+    font-weight: 800;
+}
+
+.divider-img{
+    padding-bottom: 4.2em;
+}
+
+.btn{
+    background-color: hsl(150, 100%, 66%);
+    outline: none;
+    border: none;
+    width: 60px;
+    height: 60px;
+    padding: 1em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 33.5em;
+}
